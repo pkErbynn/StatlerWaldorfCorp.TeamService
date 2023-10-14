@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build and tag the Docker image
-        run: docker build -t statlerwaldorfcorp.teamservice:latest .
+        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/statlerwaldorfcorp.teamservice:latest .
         working-directory: ./src/StatlerWaldorfCorp.TeamService
         
       - name: Login to Docker Hub
