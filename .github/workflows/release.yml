@@ -15,13 +15,16 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
-      - name: Login to Docker Hub
-        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-  
-      - name: Build and tag Docker image
-        run: docker build -t statlerwaldorfcorp.teamservice:latest .
+
+      - name: Build and tag the Docker image
+        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/statlerwaldorfcorp.teamservice:${{ github.run_number }} .
         working-directory: ./src/StatlerWaldorfCorp.TeamService
-  
-      - name: Publish image to Docker Hub
-        run: docker push statlerwaldorfcorp.teamservice:latest
+        
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Publish the image to Docker Hub
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/statlerwaldorfcorp.teamservice:${{ github.run_number }}
