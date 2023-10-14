@@ -24,6 +24,5 @@ jobs:
         working-directory: ./src/StatlerWaldorfCorp.TeamService
   
       - name: Publish image to Docker Hub
-        run: docker push statlerwaldorfcorp.teamservice:latest
-        working-directory: ./src/StatlerWaldorfCorp.TeamService
-
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/statlerwaldorfcorp.teamservice:latest
+        # working-directory: ./src/StatlerWaldorfCorp.TeamService
