@@ -64,7 +64,7 @@ namespace StatlerWaldorfCorp.TeamService.Controllers
 
             if (team == null)
             {
-                return this.NotFound();
+                return this.Ok();
             }
             else
             {
