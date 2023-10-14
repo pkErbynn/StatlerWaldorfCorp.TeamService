@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build and tag the Docker image
-        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/statlerwaldorfcorp.teamservice:latest .
+        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/statlerwaldorfcorp.teamservice:${{ github.run_number }} .
         working-directory: ./src/StatlerWaldorfCorp.TeamService
         
       - name: Login to Docker Hub
@@ -27,4 +27,4 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Publish the image to Docker Hub
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/statlerwaldorfcorp.teamservice:latest
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/statlerwaldorfcorp.teamservice:${{ github.run_number }}
