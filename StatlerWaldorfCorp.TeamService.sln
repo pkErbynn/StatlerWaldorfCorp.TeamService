@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatlerWaldorfCorp.TeamService.Tests", "test\StatlerWaldorfCorp.TeamService.Tests\StatlerWaldorfCorp.TeamService.Tests.csproj", "{32F6B96A-FD8C-4FB2-B7F7-ED60E59C2751}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatlerWaldorfCorp.TeamService", "src\StatlerWaldorfCorp.TeamService\StatlerWaldorfCorp.TeamService.csproj", "{76710E2C-51EC-41FC-A0A8-4748018313FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32F6B96A-FD8C-4FB2-B7F7-ED60E59C2751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F6B96A-FD8C-4FB2-B7F7-ED60E59C2751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F6B96A-FD8C-4FB2-B7F7-ED60E59C2751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F6B96A-FD8C-4FB2-B7F7-ED60E59C2751}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76710E2C-51EC-41FC-A0A8-4748018313FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76710E2C-51EC-41FC-A0A8-4748018313FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76710E2C-51EC-41FC-A0A8-4748018313FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76710E2C-51EC-41FC-A0A8-4748018313FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5216418-FAC2-4F58-984C-3885FFAC1B3B}
+	EndGlobalSection
+EndGlobal
