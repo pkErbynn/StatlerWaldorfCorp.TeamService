@@ -21,6 +21,7 @@ jobs:
   
       - name: Build and tag Docker image
         run: docker build -t statlerwaldorfcorp.teamservice:latest .
+        working-directory: ./src/StatlerWaldorfCorp.TeamService
   
       - name: Publish image to Docker Hub
         run: docker push statlerwaldorfcorp.teamservice:latest
