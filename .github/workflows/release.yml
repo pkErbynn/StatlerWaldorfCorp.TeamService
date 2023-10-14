@@ -25,3 +25,5 @@ jobs:
   
       - name: Publish image to Docker Hub
         run: docker push statlerwaldorfcorp.teamservice:latest
+        working-directory: ./src/StatlerWaldorfCorp.TeamService
+
