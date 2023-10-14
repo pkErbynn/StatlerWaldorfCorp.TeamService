@@ -20,7 +20,7 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
   
       - name: Build and tag Docker image
-        run: docker build -t StatlerWaldorfCorp.TeamService:latest .
+        run: docker build -t statlerwaldorfcorp.teamservice:latest .
   
       - name: Publish image to Docker Hub
-        run: docker push your-image-name:your-tag
+        run: docker push statlerwaldorfcorp.teamservice:latest
