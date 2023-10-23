@@ -33,7 +33,7 @@ namespace StatlerWaldorfCorp.TeamService.Tests
 
             Team retrievedTeam = (Team)(controller.GetTeam(id) as ObjectResult).Value;
             Assert.Equal(retrievedTeam.Name, sampleName);
-            Assert.Equal(retrievedTeam.ID, id);
+            Assert.Equal(retrievedTeam.Id, id);
         }
 
 

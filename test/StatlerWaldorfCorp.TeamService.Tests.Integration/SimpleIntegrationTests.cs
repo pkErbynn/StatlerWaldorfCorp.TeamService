@@ -25,7 +25,7 @@ public class SimpleIntegrationTests
 
         zombieTeamPayload = new Team()
         {
-            ID = Guid.NewGuid(),
+            Id = Guid.NewGuid(),
             Name = "Zombie"
         };
     }
@@ -46,6 +46,6 @@ public class SimpleIntegrationTests
 
         Assert.Single(teams);
         Assert.Equal("Zombie", teams[0].Name);
-        Assert.Equal(zombieTeamPayload.ID, teams[0].ID);
+        Assert.Equal(zombieTeamPayload.Id, teams[0].Id);
     }
 }
