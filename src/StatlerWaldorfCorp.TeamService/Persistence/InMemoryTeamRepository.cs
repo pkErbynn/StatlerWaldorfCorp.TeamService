@@ -27,14 +27,14 @@ namespace StatlerWaldorfCorp.TeamService.Persistence
 
         public Team Get(Guid id)
         {
-            return teams.FirstOrDefault(t => t.ID == id);
+            return teams.FirstOrDefault(t => t.Id == id);
         }
 
         public Team Update(Team t)
         {
             if (t == null) return null;
 
-            Team team = this.Delete(t.ID);
+            Team team = this.Delete(t.Id);
             if (team != null)
             {
                 team = this.Add(t);
@@ -52,7 +52,7 @@ namespace StatlerWaldorfCorp.TeamService.Persistence
 
         public Team Delete(Guid id)
         {
-            var t = teams.Where(x => x.ID == id);
+            var t = teams.Where(x => x.Id == id);
             Team team = null;
 
             if (t.Count() > 0)

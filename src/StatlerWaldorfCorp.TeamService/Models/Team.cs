@@ -4,7 +4,7 @@ namespace StatlerWaldorfCorp.TeamService.Models
 	public class Team
 	{
 		public string Name { get; set; }
-		public Guid ID { get; set; }	// Member Id
+		public Guid Id { get; set; }	// Member Id
 		public ICollection<Member> Members { get; set; }
 
 		public Team()
@@ -20,7 +20,7 @@ namespace StatlerWaldorfCorp.TeamService.Models
 		public Team(string name, Guid id): this(name)
 		{
 			this.Name = name;
-			this.ID = id;
+			this.Id = id;
 		}
 
         public override string ToString()
