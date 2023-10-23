@@ -39,13 +39,13 @@ namespace StatlerWaldorfCorp.TeamService.Controllers
         {
 			this.repository.Add(newTeam);
 
-            return this.Created($"/teams/{newTeam.ID}", newTeam);
+            return this.Created($"/teams/{newTeam.Id}", newTeam);
         }
 
         [HttpPut("{id}")]
         public virtual IActionResult UpdateTeam([FromBody] Team team, Guid id)
         {
-            team.ID = id;   // nb
+            team.Id = id;   // nb
 
             if (repository.Update(team) == null)
             {
@@ -64,11 +64,11 @@ namespace StatlerWaldorfCorp.TeamService.Controllers
 
             if (team == null)
             {
-                return this.Ok();
+                return this.NotFound();
             }
             else
             {
-                return this.Ok(team.ID);
+                return this.Ok(team.Id);
             }
         }
     }
