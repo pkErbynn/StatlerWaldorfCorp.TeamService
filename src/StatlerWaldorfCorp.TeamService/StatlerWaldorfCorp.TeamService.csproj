@@ -11,6 +11,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
     <InternalsVisibleTo Include="$(AssemblyName).Tests.Integration" />
@@ -19,9 +20,11 @@
   <ItemGroup>
     <None Remove="Models\" />
     <None Remove="Persistence\" />
+    <None Remove="LocationClient\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Persistence\" />
+    <Folder Include="LocationClient\" />
   </ItemGroup>
 </Project>
