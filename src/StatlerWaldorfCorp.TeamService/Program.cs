@@ -15,8 +15,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ITeamRepository, InMemoryTeamRepository>();
 
-var locationUrl = builder.Configuration.GetSection("location:url").Value;
-//var locationUrl = builder.Configuration["location:url"];
+var locationUrl = builder.Configuration.GetSection("location:url").Value; // builder.Configuration["location:url"];
 
 builder.Services.AddSingleton<ILocationClient>(new HttpLocationClient(locationUrl));
 
